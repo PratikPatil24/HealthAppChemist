@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DashActivity"></activity>
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppThemeNoActionBar" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/splashTheme">
