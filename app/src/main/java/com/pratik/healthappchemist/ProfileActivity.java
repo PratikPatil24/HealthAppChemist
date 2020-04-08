@@ -61,7 +61,7 @@ public class ProfileActivity extends AppCompatActivity {
         SignOutButton = findViewById(R.id.btnSignOut);
 
         phoneno = mAuth.getCurrentUser().getPhoneNumber();
-        DocumentReference docRef = db.collection("users").document(phoneno + "c");
+        DocumentReference docRef = db.collection("chemists").document(phoneno);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -115,7 +115,7 @@ public class ProfileActivity extends AppCompatActivity {
                 user.put("area", AreaTextInput.getText().toString().toLowerCase());
                 user.put("addressline", AddressLineTextInput.getText().toString().toLowerCase());
 
-                db.collection("users").document(phoneno + "c")
+                db.collection("chemists").document(phoneno)
                         .set(user)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

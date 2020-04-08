@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                DocumentReference docRef = db.collection("users").document(phoneno + "c");
+                DocumentReference docRef = db.collection("chemists").document(phoneno);
                 docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
