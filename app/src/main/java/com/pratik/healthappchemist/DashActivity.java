@@ -100,24 +100,28 @@ public class DashActivity extends AppCompatActivity {
             }
         });
 
-        ActiveOnline.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         ActiveOffline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(DashActivity.this, ActiveOfflineActivity.class);
+                startActivity(i);
+            }
+        });
 
+        ActiveOnline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DashActivity.this, ActiveOnlineActivity.class);
+                startActivity(i);
             }
         });
 
         CompleteOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(DashActivity.this, CompleteActivity.class);
+                startActivity(i);
             }
         });
     }
