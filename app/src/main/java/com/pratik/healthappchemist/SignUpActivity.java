@@ -135,7 +135,7 @@ public class SignUpActivity extends AppCompatActivity {
                             } else {
 
                                 //Checking If Not Doctor
-                                DocumentReference docRef = db.collection("chemists").document(phoneno);
+                                DocumentReference docRef = db.collection("doctors").document(phoneno);
                                 docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                     @Override
                                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -293,7 +293,7 @@ public class SignUpActivity extends AppCompatActivity {
         user.put("city", CityTextInput.getText().toString().toLowerCase());
         user.put("area", AreaTextInput.getText().toString().toLowerCase());
         user.put("addressline", AddressLineTextInput.getText().toString().toLowerCase());
-        db.collection("chemists").document(phoneno + "c")
+        db.collection("chemists").document(phoneno)
                 .set(user)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

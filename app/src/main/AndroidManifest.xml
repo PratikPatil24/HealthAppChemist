@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".CompleteActivity"></activity>
+        <activity android:name=".ActiveOnlineActivity" />
+        <activity android:name=".ActiveOfflineActivity" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".DashActivity" />
         <activity
             android:name=".SignUpActivity"
