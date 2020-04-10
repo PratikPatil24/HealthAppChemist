@@ -1,15 +1,19 @@
 package com.pratik.healthappchemist.models;
 
-public class Order {
+import java.io.Serializable;
 
-    String id, doctorName, patientName, doctorID, doctorSpeciality, doctorDegree, date, medicines, orderType, type;
+public class Order implements Serializable {
+
+    String id, chemistID, patientID, doctorName, patientName, doctorID, doctorSpeciality, doctorDegree, date, medicines, orderType, type;
     int status;
 
     public Order() {
     }
 
-    public Order(String id, String doctorName, String patientName, String doctorID, String doctorSpeciality, String doctorDegree, String date, String medicines, String orderType, String type, int status) {
+    public Order(String id, String chemistID, String patientID, String doctorName, String patientName, String doctorID, String doctorSpeciality, String doctorDegree, String date, String medicines, String orderType, String type, int status) {
         this.id = id;
+        this.chemistID = chemistID;
+        this.patientID = patientID;
         this.doctorName = doctorName;
         this.patientName = patientName;
         this.doctorID = doctorID;
@@ -28,6 +32,22 @@ public class Order {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getChemistID() {
+        return chemistID;
+    }
+
+    public void setChemistID(String chemistID) {
+        this.chemistID = chemistID;
+    }
+
+    public String getPatientID() {
+        return patientID;
+    }
+
+    public void setPatientID(String patientID) {
+        this.patientID = patientID;
     }
 
     public String getDoctorName() {
